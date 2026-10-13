@@ -4,6 +4,10 @@ React 19 · TypeScript · Vite · Tailwind CSS 4 · shadcn/ui 스타일 Button(R
 
 ## GitHub Pages 배포
 
+- 배포 주소: https://cardmarket712.github.io/card-dashboard/
+- 저장소: https://github.com/cardmarket712/card-dashboard
+- 배포 사이트 점검: `PAGES_CHECK_URL` 환경변수에 배포 주소를 설정한 뒤 `node scripts/pages-check.mjs` 실행.
+
 `.github/workflows/deploy-pages.yml`은 `main` 브랜치에 push되면 테스트 → 빌드 → GitHub Pages 배포를 실행합니다. 저장소의 **Settings → Pages → Build and deployment → Source**는 **GitHub Actions**로 설정합니다. GitHub 연결 및 대상 저장소가 필요하며 로컬 설정 파일만 생성한 상태는 배포 완료가 아닙니다.
 
 저장소 하위 경로는 Pages 메타데이터로 자동 적용합니다. 배포 빌드에서는 해시 라우팅(`/#/journey/3`)을 사용해 상세 페이지 새로고침 시 404를 방지합니다. 개발 서버 경로는 기존과 동일합니다. 로컬 과제는 브라우저 출처별로 저장되므로 localhost의 과제가 배포 사이트로 자동 이전되지는 않습니다.
